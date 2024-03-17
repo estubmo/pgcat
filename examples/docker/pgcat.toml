@@ -124,4 +124,20 @@ servers = [
     [ "postgres", 5432, "primary" ],
     [ "postgres", 5432, "replica" ],
 ]
-database = "postgres"
+database = "postgres
+[pools.otherpool.users.0]
+username = "otherpool"
+password = "otherpool"
+
+poo_size = 9
+statement_timeout = 0
+:w!
+:q
+
+[pools.otherpool.shards.0]
+# [ host, port, role ]
+servers = [["supabase-db", 5432, "primary"]]
+# Database name (e.g. "postgres")
+database = "testdbname"
+
+"
