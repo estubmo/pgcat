@@ -105,39 +105,26 @@ statement_timeout = 0
 # Shard 0
 [pools.postgres.shards.0]
 # [ host, port, role ]
-servers = [
-    [ "postgres", 5432, "primary" ],
-    [ "postgres", 5432, "replica" ]
-]
+servers = [["postgres", 5432, "primary"], ["postgres", 5432, "replica"]]
 # Database name (e.g. "postgres")
 database = "postgres"
 
 [pools.postgres.shards.1]
-servers = [
-    [ "postgres", 5432, "primary" ],
-    [ "postgres", 5432, "replica" ],
-]
+servers = [["postgres", 5432, "primary"], ["postgres", 5432, "replica"]]
 database = "postgres"
 
 [pools.postgres.shards.2]
-servers = [
-    [ "postgres", 5432, "primary" ],
-    [ "postgres", 5432, "replica" ],
-]
-database = "postgres
+servers = [["postgres", 5432, "primary"], ["postgres", 5432, "replica"]]
+database = "postgres"
 [pools.otherpool.users.0]
 username = "otherpool"
 password = "otherpool"
 
-poo_size = 9
+pool_size = 9
 statement_timeout = 0
-:w!
-:q
 
 [pools.otherpool.shards.0]
 # [ host, port, role ]
 servers = [["supabase-db", 5432, "primary"]]
 # Database name (e.g. "postgres")
 database = "testdbname"
-
-"

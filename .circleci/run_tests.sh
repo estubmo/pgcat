@@ -107,6 +107,7 @@ cd ../..
 #
 pip3 install -r tests/python/requirements.txt
 python3 tests/python/tests.py || exit 1
+python3 tests/python/async_tests.py || exit 1
 
 
 #
